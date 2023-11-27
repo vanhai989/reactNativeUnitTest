@@ -21,8 +21,14 @@ describe('test mock api', () => {
         axios.get.mockResolvedValue(resp2);
         // axios.get.mockImplementation(() => Promise.resolve(resp2.data))
 
+        await Promise.resolve();
         const data2 = await Users.secondApi();
-        return expect(data2).toEqual(users2);
+        expect(data2).toEqual(users2);
+
+        const data3 = await Users.callRealAPI();
+
+        await Promise.resolve();
+        console.log('data3', data3);
       });
 
 })
