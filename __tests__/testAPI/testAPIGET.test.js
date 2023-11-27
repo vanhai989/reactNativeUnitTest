@@ -30,5 +30,8 @@ describe('test mock api', () => {
         await Promise.resolve();
         console.log('data3', data3);
       });
+      test('test mock api second success', () => {
+
+      })
 
 })
